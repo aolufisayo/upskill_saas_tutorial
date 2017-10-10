@@ -1,4 +1,4 @@
-class ContactMailers < ActionMailer::Base
+class ContactMailer < ActionMailer::Base
   default to: 'juliematheson@yandex.com'
   
   def contact_email(name, email, comments)

@@ -11,10 +11,10 @@ class ContactsController < ApplicationController
       comments = params[:contact][:comments]
       ContactMailer.contact_email(name, email, comments).deliver
       flash[:success] = "Message Sent"
-      redirect_to new_contact_path 
+      redirect_to contact_us_path 
     else
       flash[:danger] = @contact.errors.full_messages.join(", ")
-      redirect_to new_contact_path
+      redirect_to contact_us_path
     end
   end
   
